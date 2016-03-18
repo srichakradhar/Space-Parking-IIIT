@@ -1,0 +1,38 @@
+import javax.swing.*;
+import java.awt.*;
+import javax.swing.border.EmptyBorder;
+public class Exit_UI extends JFrame {
+  private static final long serialVersionUID = 1L;
+private JPanel contentPane;
+JTextField textField_1;
+JTextArea txtrIdSParking;
+
+// Launch the application.
+
+public static void main(String[] args) {
+EventQueue.invokeLater(new Runnable() {
+public void run() {
+try {
+Exit_UI frame = new Exit_UI();
+frame.setVisible(true);
+} catch (Exception e) {
+e.printStackTrace();
+}
+}
+});
+}
+
+// Create the frame.
+public Exit_UI() {
+setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+setBounds(900, 400, 450, 300);
+contentPane = new JPanel();
+contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+setContentPane(contentPane);
+contentPane.setLayout(new BorderLayout(0, 0));
+JPanel panel = new JPanel();
+contentPane.add(panel, BorderLayout.NORTH);
+JLabel lblThankYou = new JLabel("Thank you!");
+panel.add(lblThankYou);
+lblThankYou.setFont(new Font("Times New Roman", Font.PLAIN, 28));
+JPanel panel_1 = new JPanel();
